@@ -1,0 +1,89 @@
+@use '../../variables.scss' as vars;
+
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+  }
+
+  .dropdown-arrow, .dropdown-arrow-reverse {
+    width: 25px;
+    height: 16px;
+    margin-right: 16px;
+    transition: transform 300ms ease-in-out;
+  }
+
+  .dropdown-arrow-reverse {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: vars.$kasa-color;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .dropdown-menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
+    opacity: 0;
+  }
+
+  .dropdown-enter {
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .dropdown-enter-active {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .dropdown-enter-done {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .dropdown-exit {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .dropdown-exit-active {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .dropdown-item {
+    padding: 10px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: start;
+  }
+
+  @media (max-width: 767.98px) {
+    .dropdown {
+      width: 100%;
+    }
+  }
