@@ -1,0 +1,190 @@
+@use '../../variables.scss' as vars;
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.logement-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logement-infos h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: vars.$kasa-color;
+}
+
+.logement-infos p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.logement-tags {
+    margin-top: vars.$space-between;
+    display: flex;
+    flex-direction: row;
+    gap: vars.$space-between;
+}
+
+.logement-tags .tag {
+    height: 25px;
+    min-width: 115px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    background-color: vars.$kasa-color;
+    border-radius: 10px;
+    align-content: center;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+    justify-content: end;
+    gap: vars.$space-between;
+    margin-bottom: vars.$space-between;
+}
+
+.user p {
+    font-weight: 500;
+    font-size: 18px;
+    color: vars.$kasa-color;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.user img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50px;
+}
+
+.additional-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.additional-infos .dropdown {
+    width: 45%;
+}
+
+.dropdown p {
+    margin: 0px;
+}
+
+.carousel {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: vars.$margin-size;
+}
+
+.carousel-container {
+    display: flex;
+    height: inherit;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    max-height: inherit;
+    transition: opacity 1s;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    font-size: 6rem;
+    padding: vars.$space-between;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.hide {
+    display: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (max-width:1239.98px) {
+    .carousel {
+        width: 100%;
+        height: 415px;
+        margin-bottom: 30px;
+    }
+
+    .infos {
+        flex-direction: column;
+    }
+
+    .user-infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .user {
+        order: 2;
+    }
+
+    .rating {
+        order: 1;
+    }
+
+    .additional-infos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .additional-infos .dropdown {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel {
+        height: 315px;
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel {
+        height: 215px;
+    }
+}
