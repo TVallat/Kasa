@@ -1,0 +1,55 @@
+@use '../../variables.scss' as vars;
+
+footer {
+  max-width: none;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: black;
+  align-items: center;
+  text-align: center;
+  margin-top: vars.$margin-size;
+  padding-top: vars.$padding-size;
+  padding-bottom: vars.$padding-size;
+}
+
+footer img {
+  height: 40px;
+  width: 122px;
+}
+
+footer p {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:1239.98px) {
+  
+  footer {
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  footer {
+    margin-left: -20px;
+    margin-bottom: -20px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  footer {
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+}
