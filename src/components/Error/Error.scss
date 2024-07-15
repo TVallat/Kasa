@@ -1,0 +1,41 @@
+@use '../../variables.scss' as vars;
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.error-title {
+    font-size: 288px;
+    color: vars.$kasa-color;
+    font-weight: 700;
+}
+
+.error-text {
+    font-size: 36px;
+    color: vars.$kasa-color;
+    font-weight: 500;
+}
+
+p, Link {
+    margin-bottom: vars.$margin-size;
+}
+
+@media (max-width: 1239.98px) {
+    .error-title {
+        font-size: 200px;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .error-title {
+        font-size: 180px;
+    }  
+}
+
+@media (max-width: 400px) {
+    .error-title {
+        font-size: 120px;
+    }  
+}
