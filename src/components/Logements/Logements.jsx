@@ -83,6 +83,7 @@ const Logements = () => {
         </div>
         <button className={`prev-btn ${hideArrows(pictures)}`} onClick={handlePrevClick}>❮</button>
         <button className={`next-btn ${hideArrows(pictures)}`} onClick={handleNextClick}>❯</button>
+        <p className="image-counter">{currentIndex+1}/{pictures.length}</p>
       </div>
       <div className="infos">
         <div className="logement-infos">
